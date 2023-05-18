@@ -14,9 +14,13 @@ namespace MoHegyei
 
         public Hegycsucs(string hegy, string hegyseg, int magassag)
         {
-            this.hegy = hegy;
-            this.hegyseg = hegyseg;
-            this.magassag = magassag;
+            this.Hegy = hegy;
+            this.Hegyseg = hegyseg;
+            this.Magassag = magassag;
         }
+
+        public string Hegy { get => hegy; set => hegy = value; }
+        public string Hegyseg { get => hegyseg; set => hegyseg = value; }
+        public int Magassag { get => magassag; set => magassag = value; }
     }
 }
