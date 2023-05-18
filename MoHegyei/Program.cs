@@ -64,31 +64,5 @@ namespace MoHegyei
             Console.WriteLine($"5. feladat: A legamagasabb hegycsúcs adatai: ");
             Console.WriteLine($"Név: {neve}, Hegység: {hegyseg}, Magassága: {magassag}m.");
         }
-
-
-        static void Hatodik()
-        {
-            Console.WriteLine("6. feladat: Kérek egy magasségot: ");
-            int adat = Convert.ToInt32(Console.ReadLine());
-            int megfelel = 0;
-
-            foreach (var item in csucsok)
-            {
-                if (item.Hegyseg.Contains("Börzsöny"))
-                {
-                    if (adat < item.Magassag)
-                    {
-                        megfelel = item.Magassag;
-                        Console.WriteLine($"Van magasabb hegycsúcs a Börzsönybeen {adat}m-nál, mégpedig a {megfelel}m magas {item.Hegy} az.");
-                        break;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"{adat}-nál nincs magasabb hegycsúcs a Börzsönyben!");
-                        break;
-                    }
-                }
-            }
-        }
     }
 }
